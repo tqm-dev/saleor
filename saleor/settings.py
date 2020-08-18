@@ -165,7 +165,10 @@ MEDIA_URL = os.environ.get("MEDIA_URL", "/media/")
 STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
 STATIC_URL = os.environ.get("STATIC_URL", "/static/")
 STATICFILES_DIRS = [
-    ("images", os.path.join(PROJECT_ROOT, "saleor", "static", "images"))
+    # Copy all of the static files storefront generated to STATIC_ROOT
+    os.path.join(PROJECT_ROOT, "storefront", "dist"),
+    # Copy all to marge images
+    ("images", os.path.join(PROJECT_ROOT, "saleor", "static", "images")),
 ]
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",

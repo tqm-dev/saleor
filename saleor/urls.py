@@ -3,6 +3,7 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib.staticfiles.views import serve
 from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import TemplateView
 
 from .data_feeds.urls import urlpatterns as feed_urls
 from .graphql.api import schema
@@ -23,6 +24,7 @@ urlpatterns = [
         handle_plugin_webhook,
         name="plugins",
     ),
+    url(r"^storefront/", TemplateView.as_view(template_name="storefront.html"), name="storefront"),
 ]
 
 if settings.DEBUG:
