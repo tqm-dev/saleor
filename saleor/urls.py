@@ -24,7 +24,9 @@ urlpatterns = [
         handle_plugin_webhook,
         name="plugins",
     ),
-    url(r"^storefront/", TemplateView.as_view(template_name="storefront.html"), name="storefront"),
+
+    # Storefront application endpoints for production
+    url(r"^storefront/", TemplateView.as_view(template_name="index.html"), name="storefront"),
 ]
 
 if settings.DEBUG:
