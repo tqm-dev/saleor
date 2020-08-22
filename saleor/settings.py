@@ -166,8 +166,8 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
 STATIC_URL = os.environ.get("STATIC_URL", "/static/")
 STATICFILES_DIRS = [
     # Copy all of the static files storefront generated to STATIC_ROOT
-    os.path.join(PROJECT_ROOT, "storefront", "dist"),
-    # Copy all to marge images
+    ("storefront-assets", os.path.join(PROJECT_ROOT, "storefront", "dist")),
+    ("dashboard-assets",  os.path.join(PROJECT_ROOT, "dashboard",  "build/dashboard")),
     ("images", os.path.join(PROJECT_ROOT, "saleor", "static", "images")),
 ]
 STATICFILES_FINDERS = [
