@@ -4,6 +4,3 @@
 [submodule "saleor/storefront"]
 	path = saleor/storefront
 	url = https://github.com/tqm-dev/saleor-storefront
-[submodule "dashboard"]
-	path = dashboard
-	url = https://github.com/tqm-dev/saleor-dashboard
