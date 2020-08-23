@@ -1,6 +1,1 @@
-[submodule "storefront"]
-	path = storefront
-	url = https://github.com/tqm-dev/saleor-storefront
-[submodule "saleor/storefront"]
-	path = saleor/storefront
-	url = https://github.com/tqm-dev/saleor-storefront
+
