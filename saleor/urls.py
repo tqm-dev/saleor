@@ -25,7 +25,7 @@ urlpatterns = [
         name="plugins",
     ),
 
-    url(r"^storefront/", TemplateView.as_view(template_name="storefront.html"), name="storefront"),
+    url(r"^/",           TemplateView.as_view(template_name="storefront.html"), name="storefront"),
     url(r"^dashboard/",  TemplateView.as_view(template_name="dashboard.html"),  name="dashboard"),
 ]
 
